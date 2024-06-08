@@ -13,4 +13,4 @@
     command : sudo systemctl start docker
 
   - name: Deploy Docker Container
-    command: docker run -itd -p 8086:8081 saimaajaz23/igbank:1.0
+    command: docker run -itd -p 8888:8081 saimaajaz23/igbank:2.0
