@@ -12,9 +12,17 @@ provider "aws" {
 }
 resource "aws_instance" "web" {
   ami           = "ami-04b70fa74e45c3917"
+  instance_type = "t2.medium"
+
+  tags = {
+    Name = "Banking-master"
+ }
+}
+resource "aws_instance" "web" {
+  ami           = "ami-04b70fa74e45c3917"
   instance_type = "t2.micro"
 
   tags = {
-    Name = "Banking"
+    Name = "Banking-node"
  }
 }
