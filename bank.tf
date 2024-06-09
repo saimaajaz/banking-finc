@@ -10,7 +10,7 @@ terraform {
 provider "aws" {
   region = "us-east-1"
 }
-resource "aws_instance" "web" {
+resource "aws_instance" "master-bank" {
   ami           = "ami-04b70fa74e45c3917"
   instance_type = "t2.medium"
 
@@ -18,7 +18,7 @@ resource "aws_instance" "web" {
     Name = "Banking-master"
  }
 }
-resource "aws_instance" "web" {
+resource "aws_instance" "node-bank" {
   ami           = "ami-04b70fa74e45c3917"
   instance_type = "t2.micro"
 
